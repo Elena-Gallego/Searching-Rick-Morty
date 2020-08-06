@@ -8,6 +8,19 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { data: [], inputValue: "" };
+    this.getDataFromApi = this.getDataFromApi.bind.this;
+  }
+
+  componentDidMount() {
+    this.getDataFromApi();
+  }
+
+  getDataFromApi() {
+    fetch(`https://rickandmortyapi.com/documentation/#get-all-characters`)
+      .then((response) => response.json())
+      .then((responseData) => {
+        this.setState({ ...this.state, data: responseData });
+      });
   }
   render() {
     return (
