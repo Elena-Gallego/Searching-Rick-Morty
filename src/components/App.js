@@ -32,37 +32,46 @@ class App extends React.Component {
   }
   render() {
     return (
-      <main>
-        <Switch>
-          <Route
-            exact
-            path="/"
-            render={() => (
-              <div>
-                <Filters
-                  inputValue={this.state.inputValue}
-                  onChange={(event) => this.filterHandleChange(event)}
-                />
-                <CharacterList
-                  data={this.state.data}
-                  inputValue={this.state.inputValue}
-                />
-              </div>
-            )}
-          />
-          <Route
-            path="/character_detail/:id"
-            render={(routerProps) => {
-              const card = this.state.data.find(
-                (card) => card.id === parseInt(routerProps.match.params.id)
-              );
-              if (card) {
-                return <CharacterDetail card={card} />;
-              }
-            }}
-          />
-        </Switch>
-      </main>
+      <div className="app">
+        <header className="header"></header>
+        <main className="main">
+          <Switch>
+            <Route
+              exact
+              path="/"
+              render={() => (
+                <div className="home">
+                  <Filters
+                    inputValue={this.state.inputValue}
+                    onChange={(event) => this.filterHandleChange(event)}
+                  />
+                  <CharacterList
+                    data={this.state.data}
+                    inputValue={this.state.inputValue}
+                  />
+                </div>
+              )}
+            />
+            <Route
+              path="/character_detail/:id"
+              render={(routerProps) => {
+                const card = this.state.data.find(
+                  (card) => card.id === parseInt(routerProps.match.params.id)
+                );
+                if (card) {
+                  return <CharacterDetail card={card} />;
+                } else {
+                  return (
+                    <span className="error-url">
+                      El personaje que buscas no existe
+                    </span>
+                  );
+                }
+              }}
+            />
+          </Switch>
+        </main>
+      </div>
     );
   }
 }

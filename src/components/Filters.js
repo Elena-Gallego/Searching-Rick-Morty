@@ -2,10 +2,11 @@ import React from "react";
 
 function Filters(props) {
   return (
-    <form onSubmit={(event) => event.preventDefault()}>
+    <form className="filter-form" onSubmit={(event) => event.preventDefault()}>
       {" "}
-      {/*manejador de evento para que mp se haga un submit al hacer intro*/}
+      {/*manejador de evento para que no se haga un submit al hacer intro*/}
       <input
+        className="filter-input"
         type="text"
         id="filterName"
         value={props.inputValue}

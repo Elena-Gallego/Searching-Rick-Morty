@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 function CharacterDetail(props) {
   return (
-    <section>
+    <section className="character-detail">
       <Link className="return-home" to="/">
         {" "}
         Volver{" "}
       </Link>
-      <article>
+      <article className="detail.card">
         <img className="image" src={props.card.image} alt="detail" />
         <h2 className="name">{props.card.name}</h2>
         <span className="status">Status:{props.card.status}</span>
