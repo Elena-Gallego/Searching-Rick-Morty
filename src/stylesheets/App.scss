@@ -6,11 +6,11 @@ body {
   width: 100vw;
   height: auto;
   padding: 10px;
-  /*display: flex;
+  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  text-align: center;*/
+  text-align: center;
 
   .app {
     width: 100vw;
@@ -20,39 +20,17 @@ body {
       width: 100%;
       height: auto;
       padding: 10px;
-      margin-bottom: 50px;
 
       @media all and (min-width: 768px) {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        margin-left: 80px;
         width: 80%;
       }
       @media all and (min-width: 1200px) {
-        display: inline;
-        width: 35%;
-        margin-bottom: 10px;
+        width: 45%;
       }
     }
     .error-url {
       color: white;
       font-family: "Roboto", sans-serif;
-      font-size: 14px;
-      margin-left: 15%;
-      @media all and (min-width: 768px) {
-        margin-top: 200px;
-        font-size: 25px;
-        margin-left: 23%;
-      }
-      @media all and (min-width: 1200px) {
-        display: block;
-        margin-left: 33%;
-        width: 35%;
-        margin-bottom: 10px;
-      }
     }
   }
 }

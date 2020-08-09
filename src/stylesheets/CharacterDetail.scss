@@ -5,7 +5,7 @@
   font-family: "Architects Daughter", cursive;
 
   .return-home {
-    margin-left: 185px;
+    margin-left: 110px;
     padding: 5px;
     font-size: 14px;
     background-color: #a3bb50;
@@ -13,11 +13,11 @@
     border-radius: 5px;
     @media all and (min-width: 768px) {
       font-size: 20px;
-      margin-left: 420px;
+      margin-left: 150px;
     }
     @media all and (min-width: 1200px) {
       font-size: 22px;
-      margin-left: 700px;
+      margin-left: 150px;
     }
   }
   .detail-card {
@@ -41,6 +41,7 @@
       }
     }
     .detail-name {
+      font-family: "Shadows Into Light", cursive;
       width: 150px;
       border-radius: 5px;
       font-size: 25px;

@@ -21,6 +21,7 @@ function CharacterList(props) {
               species={card.species}
               key={card.id}
               id={card.id}
+              gender={card.gender}
             />
           ))}
       </ul>

@@ -15,10 +15,16 @@ function CharacterDetail(props) {
           <span className="detail-status">
             <strong>-Status: </strong>
             {props.card.status}
+            {props.card.status === "Dead" ? " 💀" : ""}
           </span>
           <span className="detail-specie">
             <strong>-Species: </strong>
             {props.card.species}
+            {props.card.species === "Human"
+              ? props.card.gender === "Male"
+                ? " 🙍🏿‍♂️"
+                : " 👩🏽‍💼"
+              : " 👽"}
           </span>
           <span className="detail-planet">
             <strong>-Origin: </strong>
