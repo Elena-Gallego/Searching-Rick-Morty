@@ -1,4 +1,5 @@
 import React from "react";
+import "../stylesheets/Filters.scss";
 
 function Filters(props) {
   return (
@@ -9,6 +10,7 @@ function Filters(props) {
         className="filter-input"
         type="text"
         id="filterName"
+        placeholder=" 🔎  Search characters name..."
         value={props.inputValue}
         onChange={props.onChange}
       />

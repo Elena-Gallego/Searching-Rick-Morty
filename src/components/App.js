@@ -4,6 +4,7 @@ import CharacterList from "./CharacterList";
 import CharacterDetail from "./CharacterDetail";
 import Filters from "./Filters";
 import "../stylesheets/App.scss";
+import LogoTitle from "../images/RickMorty_logo.png";
 
 class App extends React.Component {
   constructor(props) {
@@ -33,7 +34,13 @@ class App extends React.Component {
   render() {
     return (
       <div className="app">
-        <header className="header"></header>
+        <header className="header">
+          <img
+            className="header-logo"
+            src={LogoTitle}
+            alt="Rick and Morty"
+          ></img>
+        </header>
         <main className="main">
           <Switch>
             <Route
