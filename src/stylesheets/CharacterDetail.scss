@@ -2,8 +2,8 @@
 
 .character-detail {
   color: white;
-  font-family: "Architects Daughter", cursive;
-
+  font-family: "Mali", cursive;
+  font-weight: 200;
   .return-home {
     margin-left: 110px;
     padding: 5px;
@@ -26,7 +26,7 @@
     align-items: center;
 
     .detail-image {
-      border: 4px solid #54ad5c;
+      border: 4px solid #79244a;
       border-radius: 5px;
       width: 180px;
       margin-top: 20px;
@@ -36,15 +36,16 @@
         margin-top: 30px;
       }
       @media all and (min-width: 1200px) {
-        width: 280px;
-        margin-top: 30px;
+        width: 250px;
+        margin-top: 15px;
       }
     }
     .detail-name {
-      font-family: "Shadows Into Light", cursive;
+      font-family: "Mali", cursive;
       width: 150px;
       border-radius: 5px;
       font-size: 25px;
+      font-weight: 400;
       @media all and (min-width: 768px) {
         font-size: 30px;
       }
@@ -54,20 +55,25 @@
     }
     .detail-data {
       border-radius: 5px;
-      width: 160px;
+      width: 170px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: start;
       text-align: left;
-      font-size: 15px;
+      font-size: 14px;
       background-color: #a3bb50;
       padding: 10px;
+      line-height: 20px;
       padding-top: 5px;
       margin-top: 10px;
       @media all and (min-width: 768px) {
         width: 300px;
         font-size: 22px;
+        line-height: 30px;
+      }
+      @media all and (min-width: 1200px) {
+        line-height: 25px;
       }
     }
   }

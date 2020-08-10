@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "../stylesheets/CharacterCard.scss";
 
@@ -8,15 +9,14 @@ function CharacterCard(props) {
       <Link to={`/character_detail/${props.id}`}>
         <img className="card-image" src={props.image} alt="" />
         <h2 className="card-name">{props.name}</h2>
-        <span className="card-specie">
-          {props.species === "Human"
-            ? props.gender === "Male"
-              ? "🙍🏿‍♂️"
-              : "👩🏽‍💼"
-            : "👽"}
-        </span>
+        <span className="card-specie">{props.species}</span>
       </Link>
     </li>
   );
 }
 export default CharacterCard;
+CharacterCard.propTypes = {
+  id: PropTypes.number,
+  image: PropTypes.string,
+  name: PropTypes.string,
+};

@@ -70,7 +70,7 @@ class App extends React.Component {
                 } else {
                   return (
                     <span className="error-url">
-                      El personaje que buscas no existe
+                      El personaje que buscas no existe 👻
                     </span>
                   );
                 }

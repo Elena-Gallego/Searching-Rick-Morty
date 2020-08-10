@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import "../stylesheets/Filters.scss";
 
 function Filters(props) {
@@ -19,3 +20,7 @@ function Filters(props) {
 }
 
 export default Filters;
+Filters.propTypes = {
+  inputValue: PropTypes.string,
+  onChange: PropTypes.func,
+};

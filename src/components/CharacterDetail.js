@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import "../stylesheets/CharacterDetail.scss";
 function CharacterDetail(props) {
@@ -13,12 +14,12 @@ function CharacterDetail(props) {
         <h2 className="detail-name">{props.card.name}</h2>
         <div className="detail-data">
           <span className="detail-status">
-            <strong>-Status: </strong>
+            <strong>Status: </strong>
             {props.card.status}
             {props.card.status === "Dead" ? " 💀" : ""}
           </span>
           <span className="detail-specie">
-            <strong>-Species: </strong>
+            <strong>Species: </strong>
             {props.card.species}
             {props.card.species === "Human"
               ? props.card.gender === "Male"
@@ -27,12 +28,12 @@ function CharacterDetail(props) {
               : " 👽"}
           </span>
           <span className="detail-planet">
-            <strong>-Origin: </strong>
+            <strong>Origin: </strong>
             {props.card.origin.name}
           </span>
           <span className="detail-episode">
             {" "}
-            <strong>-Episodes: </strong>
+            <strong>Episodes: </strong>
             {props.card.episode.length}
           </span>
         </div>
@@ -41,3 +42,6 @@ function CharacterDetail(props) {
   );
 }
 export default CharacterDetail;
+CharacterDetail.propTypes = {
+  card: PropTypes.object,
+};

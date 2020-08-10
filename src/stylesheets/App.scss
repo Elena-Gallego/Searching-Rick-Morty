@@ -19,7 +19,7 @@ body {
     .header-logo {
       width: 100%;
       height: auto;
-      padding: 10px;
+      padding-bottom: 60px;
 
       @media all and (min-width: 768px) {
         width: 80%;
@@ -30,7 +30,15 @@ body {
     }
     .error-url {
       color: white;
-      font-family: "Roboto", sans-serif;
+      font-family: "Mali", cursive;
+      font-size: 12px;
+      text-transform: uppercase;
+      @media all and (min-width: 768px) {
+        font-size: 25px;
+      }
+      @media all and (min-width: 1200px) {
+        transform: translateY(200px);
+      }
     }
   }
 }

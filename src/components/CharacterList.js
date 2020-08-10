@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import CharacterCard from "./CharacterCard";
 import "../stylesheets/CharacterList.scss";
 
@@ -21,7 +22,6 @@ function CharacterList(props) {
               species={card.species}
               key={card.id}
               id={card.id}
-              gender={card.gender}
             />
           ))}
       </ul>
@@ -36,3 +36,7 @@ function CharacterList(props) {
 }
 
 export default CharacterList;
+CharacterList.propTypes = {
+  data: PropTypes.array,
+  inputValue: PropTypes.string,
+};

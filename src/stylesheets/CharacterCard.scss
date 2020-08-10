@@ -11,15 +11,16 @@
   .card-image {
     border-radius: 5px;
     width: 80%;
-    border: 4px#358293 solid;
+    border: 4px#79244a solid;
   }
   .card-name {
     margin-top: 0px;
     width: 60%;
     background-color: #54ad5c;
     border-radius: 5px;
-    font-family: "Shadows Into Light", cursive;
-    font-size: 20px;
+    font-family: "Mali", cursive;
+    font-size: 16px;
+    font-weight: 400;
     padding-top: 5px;
     padding-bottom: 5px;
     text-decoration: inherit;
@@ -29,7 +30,9 @@
   .card-specie {
     display: block;
     width: 60%;
-    font-size: 30px;
+    font-family: "Mali", cursive;
+    font-size: 16px;
+    font-weight: 200;
     padding: 5px;
     color: white;
     background-color: #358293;
