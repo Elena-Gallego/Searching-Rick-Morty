@@ -4,16 +4,19 @@ import CharacterCard from "./CharacterCard";
 import "../stylesheets/CharacterList.scss";
 
 function CharacterList(props) {
-  const filterResults = props.data.filter((card) =>
-    card.name.toLowerCase().includes(props.inputValue.toLowerCase())
-  );
+  const filterResults = props.data
+    .filter((card) =>
+      card.name.toLowerCase().includes(props.inputValue.toLowerCase())
+    )
+    .filter((card) =>
+      card.location.name
+        .toLowerCase()
+        .includes(props.locationValue.toLowerCase())
+    );
   if (filterResults.length > 0) {
     return (
       <ul className="character-list">
-        {props.data
-          .filter((card) =>
-            card.name.toLowerCase().includes(props.inputValue.toLowerCase())
-          )
+        {filterResults
           .sort((a, b) => (a > b ? 1 : a < b ? -1 : 0))
           .map((card) => (
             <CharacterCard

@@ -15,6 +15,14 @@ function Filters(props) {
         value={props.inputValue}
         onChange={props.onChange}
       />
+      <input
+        className="filter-location"
+        type="text"
+        id="filter-name"
+        placeholder="write location"
+        value={props.locationValue}
+        onChange={props.onChangeLocation}
+      />
     </form>
   );
 }

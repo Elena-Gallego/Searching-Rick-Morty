@@ -9,15 +9,20 @@ import LogoTitle from "../images/RickMorty_logo.png";
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { data: [], inputValue: "" };
+    this.state = { data: [], inputValue: "", locationValue: "" };
     this.getDataFromApi = this.getDataFromApi.bind(this);
     this.filterHandleChange = this.filterHandleChange.bind(this);
+    this.filterLocationHandleChange = this.filterLocationHandleChange.bind(
+      this
+    );
   }
 
   componentDidMount() {
     this.getDataFromApi();
   }
-
+  filterLocationHandleChange(event) {
+    this.setState({ ...this.state, locationValue: event.target.value });
+  }
   filterHandleChange(event) {
     this.setState({ ...this.state, inputValue: event.target.value });
   }
@@ -50,11 +55,16 @@ class App extends React.Component {
                 <div className="home">
                   <Filters
                     inputValue={this.state.inputValue}
+                    locationValue={this.state.locationValue}
                     onChange={(event) => this.filterHandleChange(event)}
+                    onChangeLocation={(event) =>
+                      this.filterLocationHandleChange(event)
+                    }
                   />
                   <CharacterList
                     data={this.state.data}
                     inputValue={this.state.inputValue}
+                    locationValue={this.state.locationValue}
                   />
                 </div>
               )}
