@@ -1,18 +1,19 @@
 // HOJA DE ESTILO PARA CHARACTERDETAIL
 
 .character-detail {
+  width: 100vw;
+  height: 100%;
   color: white;
-  font-family: "Mali", cursive;
-  font-weight: 200;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   .return-home {
     margin-left: 110px;
     padding: 5px;
-    font-size: 14px;
+    font-size: 12px;
     background-color: #a3bb50;
-    border: 2px solid #54ad5c;
-    border-radius: 5px;
     @media all and (min-width: 768px) {
-      font-size: 20px;
+      font-size: 17px;
+      padding: 6px;
       margin-left: 150px;
     }
     @media all and (min-width: 1200px) {
@@ -24,9 +25,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    justify-content: center;
 
     .detail-image {
-      border: 4px solid #79244a;
       border-radius: 5px;
       width: 180px;
       margin-top: 20px;
@@ -41,20 +43,20 @@
       }
     }
     .detail-name {
-      font-family: "Mali", cursive;
+      font-family: "Ubuntu", sans-serif;
+      letter-spacing: 2px;
+      padding: 10px;
       width: 150px;
-      border-radius: 5px;
       font-size: 25px;
-      font-weight: 400;
+      font-weight: 300;
       @media all and (min-width: 768px) {
-        font-size: 30px;
+        font-size: 40px;
       }
       @media all and (min-width: 1200px) {
-        font-size: 28px;
+        font-size: 42px;
       }
     }
     .detail-data {
-      border-radius: 5px;
       width: 170px;
       display: flex;
       flex-direction: column;
@@ -62,11 +64,13 @@
       align-items: start;
       text-align: left;
       font-size: 14px;
+      font-weight: 300;
       background-color: #a3bb50;
       padding: 10px;
       line-height: 20px;
       padding-top: 5px;
       margin-top: 10px;
+      margin-bottom: 10px;
       @media all and (min-width: 768px) {
         width: 300px;
         font-size: 22px;

@@ -11,7 +11,7 @@ function Filters(props) {
         className="filter-input"
         type="text"
         id="filterName"
-        placeholder=" 🔎  Search characters name..."
+        placeholder="  Search..."
         value={props.inputValue}
         onChange={props.onChange}
       />

@@ -1,7 +1,7 @@
 // HOJA DE ESTILO PARA APP
 body {
   background-image: url(../images/galaxy.jpg);
-  background-position: center;
+  background-position: top-center;
   background-size: cover;
   width: 100vw;
   height: auto;
@@ -30,7 +30,7 @@ body {
     }
     .error-url {
       color: white;
-      font-family: "Mali", cursive;
+      font-family: "Roboto", sans-serif;
       font-size: 12px;
       text-transform: uppercase;
       @media all and (min-width: 768px) {
